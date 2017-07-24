@@ -1,0 +1,15 @@
+
+xmonad.hs:335:15: warning: [-Wdeprecations]
+    In the use of ‘defaultTheme’
+    (imported from XMonad.Layout.NoFrillsDecoration, but defined in XMonad.Layout.Decoration):
+    Deprecated: "Use def (from Data.Default, and re-exported by XMonad.Layout.Decoration) instead."
+
+xmonad.hs:408:31: warning: [-Wdeprecations]
+    In the use of ‘defaultConfig’
+    (imported from XMonad, but defined in XMonad.Config):
+    Deprecated: "Use def (from Data.Default, and re-exported by XMonad and XMonad.Config) instead."
+
+xmonad.hs:514:53: warning: [-Wdeprecations]
+    In the use of ‘defaultConfig’
+    (imported from XMonad, but defined in XMonad.Config):
+    Deprecated: "Use def (from Data.Default, and re-exported by XMonad and XMonad.Config) instead."

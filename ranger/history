@@ -1,0 +1,11 @@
+mkdir ruby
+mkdir pascal
+mkdir immortal
+open_with 
+mkdir 3
+open_with zathura
+shell feh 0NRRqrJHlmU.jpg 
+rename Media_storageq
+delete
+open_with ark
+

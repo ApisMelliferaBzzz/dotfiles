@@ -1,0 +1,47 @@
+#! /bin/sh
+bspc config border_width 0
+bspc config window_gap 50
+bspc config split_ratio 0.52
+#bspc config borderless_monocle true
+bspc config gapless_monocle false
+bspc config top_padding 20
+bspc config bottom_padding 20
+bspc config pointer_modifier mod1
+bspc config pointer_action1 move
+
+
+bspc desktop ^1 -n 1
+bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+
+bspc rule -a Gimp follow=on floating=on
+bspc rule -a Firefox desktop=^2
+bspc rule -a MPlayer floating=on
+bspc rule -a Copying floating=on
+bspc rule -a Plasma floating=on
+bspc rule -a plasmashell floating=on
+bspc rule -a Plasma-desktop floating=on
+bspc rule -a "Starting Unity..." floating=on
+bspc rule -a "Steam — Новости обновлений" floating=on
+
+#bspc config focused_border_color "#447788"
+#bspc config normal_border_color "#225566"
+#bspc config active_border_color "#003344"
+#bspc config focused_locked_border_color "#447788"
+#bspc config normal_locked_border_color "#225566"
+#bspc config active_locked_border_color "#225566"
+#bspc config urgent_border_color "#222222"
+#bspc config presel_border_color "#A4A7A8"
+
+feh --bg-tile ~/Media_storage/images/afterlife1080gauss1.png &
+start-pulseaudio-x11 &
+sudo mpd &
+xsetroot -cursor_name left_ptr &
+conky &
+synclient TapButton1=1 TapButton2=3 TapButton3=2 &
+sxhkd &
+tint2 &
+compton &
+#urxvtd &
+wmname LG3D &
+clipit &
+sleep 2 && sh ~/.config/dzenScripts/startup.sh

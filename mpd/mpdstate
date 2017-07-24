@@ -1,0 +1,54 @@
+sw_volume: 100
+audio_device_state:1:my_fifo
+audio_device_state:1:MPD PulseAudio Output
+audio_device_state:1:My HTTP Stream
+state: play
+current: 36
+time: 4.000000
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Blue Tape for a Blue Girl - Discography - APE/(2004) Black Tape for a Blue Girl - Live Bootleg #1 (160 kbps)/01 Remnants Of A Deeper Purity.mp3
+1:Blue Tape for a Blue Girl - Discography - APE/(2004) Black Tape for a Blue Girl - Live Bootleg #1 (160 kbps)/02 Your Love Is Sweeter Then Wine.mp3
+2:Blue Tape for a Blue Girl - Discography - APE/(2004) Black Tape for a Blue Girl - Live Bootleg #1 (160 kbps)/03 Knock Three Times.mp3
+3:Blue Tape for a Blue Girl - Discography - APE/(2004) Black Tape for a Blue Girl - Live Bootleg #1 (160 kbps)/04 All Tomorrow's Parties.mp3
+4:Blue Tape for a Blue Girl - Discography - APE/(2004) Black Tape for a Blue Girl - Live Bootleg #1 (160 kbps)/05 Space Oddity.mp3
+5:Bohren & der Club of Gore/2002 – Black Earth/01 - Midnight Black Earth.flac
+6:Bohren & der Club of Gore/2002 – Black Earth/02 - Crimson Ways.flac
+7:Bohren & der Club of Gore/2002 – Black Earth/03 - Maximum Black.flac
+8:Bohren & der Club of Gore/2002 – Black Earth/04 - Vigilante Crusade.flac
+9:Bohren & der Club of Gore/2002 – Black Earth/05 - Destroying Angels.flac
+10:Bohren & der Club of Gore/2002 – Black Earth/06 - Grave Wisdom.flac
+11:Bohren & der Club of Gore/2002 – Black Earth/07 - Constant Fear.flac
+12:Bohren & der Club of Gore/2002 – Black Earth/08 - Skeletal Remains.flac
+13:Bohren & der Club of Gore/2002 – Black Earth/09 - The Art Of Coffins.flac
+14:Coil/Horse Rotorvator/01 The Anal Staircase.m4a
+15:Coil/Horse Rotorvator/02 Slur.m4a
+16:Coil/Horse Rotorvator/03 Babylero.m4a
+17:Coil/Horse Rotorvator/04 Ostia (The Death Of Pasolini).m4a
+18:Coil/Horse Rotorvator/05 Herald.m4a
+19:Coil/Horse Rotorvator/06 Penetralia.m4a
+20:Coil/Horse Rotorvator/07 Ravenous.m4a
+21:Coil/Horse Rotorvator/08 Circles Of Mania.m4a
+22:Coil/Horse Rotorvator/09 Blood From The Air.m4a
+23:Coil/Horse Rotorvator/10 Who By Fire.m4a
+24:Coil/Horse Rotorvator/11 The Golden Section.m4a
+25:Coil/Horse Rotorvator/12 The First Five Minutes After Deat.m4a
+26:Coil/Coil - 1999 - Musick To Play In The Dark Vol. 1/01 - Are You Shivering  .flac
+27:Coil/Coil - 1999 - Musick To Play In The Dark Vol. 1/02 - Red Birds Will Fly Out Of The East And Destroy Paris In A Night .flac
+28:Coil/Coil - 1999 - Musick To Play In The Dark Vol. 1/03 - Red Queen .flac
+29:Coil/Coil - 1999 - Musick To Play In The Dark Vol. 1/04 - Broccoli .flac
+30:Coil/Coil - 1999 - Musick To Play In The Dark Vol. 1/05 - Strange Birds .flac
+31:Coil/Coil - 1999 - Musick To Play In The Dark Vol. 1/06 - The Dreamer Is Still Asleep .flac
+32:Audio_T1_1.aif
+33:Shokran/Shokran - Sixth Sense EP (2012)/01. Supreme Truth.mp3
+34:Shokran/Shokran - Sixth Sense EP (2012)/05. Winds Of Change.mp3
+35:Shokran/Shokran - Sixth Sense EP (2012)/04. Dark Desert.mp3
+36:Shokran/Shokran - Sixth Sense EP (2012)/03. Punishment.mp3
+37:Shokran/Shokran - Sixth Sense EP (2012)/02. Sands Of Time.mp3
+playlist_end

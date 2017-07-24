@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/bee/.config'
+let g:netrw_dirhist_2='/home/bee/.config/bspwm'
+let g:netrw_dirhist_3='/home/bee/учёба/pascal/2Dmassive/add'
+let g:netrw_dirhist_4='/home/bee/Media_storage/Video/JoJo no Kimyou na Bouken - Stardust Crusaders'

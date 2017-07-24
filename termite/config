@@ -1,0 +1,195 @@
+[options]
+resize_grip         = false
+scroll_on_output    = false
+scroll_on_keystroke = true
+audible_bell        = false
+visible_bell        = false
+mouse_autohide      = true
+allow_bold          = false
+dynamic_title       = true
+urgent_on_bell      = false
+clickable_url       = true
+#font                = Gohufont 11
+font                = Roboto Mono Bold 11
+#font                = Liberation Mono Bold 11
+scrollback_lines    = 10000
+search_wrap         = false
+icon_name           = termite
+#geometry            = 1480x800+100+100
+fullscreen          = false
+# modify_other_keys = false
+
+## "system", "on" or "off"
+cursor_blink = on
+
+## "block", "underline" or "ibeam"
+cursor_shape = block
+
+# $BROWSER is used by default
+browser = firefox
+
+## word characters used for word selection
+## (default if unset: all graphic non-punctuation/space characters)
+#word_chars = -A-Za-z0-9,./?%&#:_=+@~
+
+[colors]
+
+# grubvbox:
+
+# foreground      = #ebdbb2
+# foreground_bold = #ebdbb2
+# background      = #282828
+# color0          = #282828
+# color1          = #cc241d
+# color2          = #98971a
+# color3          = #d79921
+# color4          = #458588
+# color5          = #b16286
+# color6          = #689d6a
+# color7          = #bdae93
+# color8          = #7c6f64
+# color9          = #fb4934
+# color10         = #b8bb26
+# color11         = #fabd2f
+# color12         = #83a598
+# color13         = #d3869b
+# color14         = #8ec07c
+# color15         = #ebdbb2
+# # foreground_dim  = #666666
+# # cursor          = #dcdccc
+
+# gotham:
+
+# background      = rgba(10, 15, 20, 0.8)
+# # background      = #0a0f14
+# foreground      = #98d1ce
+# foreground_bold = #98d1ce
+# cursor  = #98d1ce
+# color0  = #0a0f14
+# color8  = #10151b
+# color1  = #c33027
+# color9  = #d26939
+# color2  = #26a98b
+# color10 = #081f2d
+# color3  = #edb54b
+# color11 = #245361
+# color4  = #195465
+# color12 = #093748
+# color5  = #4e5165
+# color13 = #888ba5
+# color6  = #33859d
+# color14 = #599caa
+# color7  = #98d1ce
+# color15 = #d3ebe9
+
+# Emerald:
+
+# if unset, will reverse foreground and background
+# highlight = #2f2f2f
+
+#background      = rgba(22, 26, 25, 0.8)
+#background      = rgba(32, 32, 32, 0.3)
+; background      = #161a19
+background	= #202020
+foreground      = #d0d0d0
+foreground_bold = #ffffff
+#foreground      = #c5c1b7
+#foreground_bold = #c5c1b7
+# cursor          = #354341
+
+#black normal / bright
+#color0          = #161a19
+#color8          = #354341
+
+#red normal / bright
+#color1          = #c34627
+#color9          = #d26939
+
+#green normal / bright
+#color2          = #0b6d5c
+#color10         = #229986
+
+#yellow normal / bright
+#color3          = #edb54b
+#color11         = #c7c32a
+
+#blue normal / bright
+#color4          = #5b7a75
+#color12         = #559ca8
+
+#magenta normal / bright
+#color5          = #4e5165
+#color13         = #888ba5
+
+#cyan normal / bright
+#color6          = #02c9de
+#color14         = #4ed3fc
+
+#white normal / bright
+#color7          = #edebe6
+#color15         = #fcfcfa
+
+##black
+#color0		= #3E3E3E
+#color8		= #525252
+##red
+#color1		= #C27067
+#color9		= #DB938C
+##green
+#color2		= #539C4F
+#color10		= #69E9A6
+##yellow
+#color3		= #CF5E18
+#color11		= #C0845E
+##blue
+#color4		= #1DBCAD
+#color12		= #75C1B9
+##magenta
+#color5		= #8F73D2
+#color13		= #AA93E1
+##cyan
+#color6		= #10ED96
+#color14		= #5EE3AE
+##white
+#color7		= #B9B9B9
+#color15		= #D0D0D0
+#!!Kaze
+
+#black
+color0=    #303030
+color8=    #525252
+#red
+color1=    #C27067
+color9=    #DB938C
+#green
+color2=    #539C4F
+color10=   #69E9A6
+#yellow
+color3=    #CF5E18
+color11=   #C0845E
+#blue
+color4=   #1DBCAD
+color12=  #75C1B9
+#magenta
+color5=   #8F73D2
+color13=   #AA93E1
+#cyan
+color6=    #10ED96
+color14=   #5EE3AE
+#white
+color7=    #B9B9B9
+color15=   #D0D0D0
+
+[hints]
+# font = Monospace 12
+# foreground = #dcdccc
+# background = #3f3f3f
+padding = 0
+border = #3f3f3f
+border_width = 0
+# roundness = 2.0
+
+
+
+# vim: ft=dosini cms=#%s
+

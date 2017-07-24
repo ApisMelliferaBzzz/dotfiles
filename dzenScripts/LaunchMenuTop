@@ -1,0 +1,248 @@
+MenuPosition= 0, 20
+item = DMenu
+cmd = sh /home/bee/.i3/dmenu
+icon = NULL
+item = Terminal
+cmd = termite
+icon = NULL
+separator
+Submenu = Internet
+	icon = NULL
+
+	item = Firefox
+	cmd = firefox
+	icon = NULL
+
+	item = Chromium
+	cmd = chromium
+	icon = NULL
+
+	item = DWB
+	cmd = dwb
+	icon = NULL
+
+	item = Deluge
+	cmd = deluge
+	icon = NULL
+
+	item = WICD
+	cmd = termite -e 'wicd-curses'
+	icon = NULL
+
+	item = NetStat
+	cmd = netstat-nat
+	icon = NULL
+
+Submenu = Video
+	icon = NULL
+
+	item = Video Folder
+	cmd = termite -e ranger /home/bee/Media_storage/Video
+	icon = NULL
+
+	item = Bomi
+	cmd = bomi
+	icon = NULL
+
+	item = SMPlayer
+	cmd = smplayer
+	icon = NULL
+
+	item = Open Shot
+	cmd = openshot
+	icon = NULL
+
+Submenu = Audio
+	icon = NULL
+
+	item = ncmpcpp
+	cmd = termite -e "ncmpcpp -h bucCelLati@0.0.0.0"
+	icon = NULL
+
+	item = DeadBeef
+	cmd = deadbeef
+	icon = NULL
+
+	item = Clementine
+	cmd = clementine
+	icon = NULL
+
+	item = PulseAudio Volume Control
+	cmd = pavucontrol
+	icon = NULL
+
+	item = AlsaMixer
+	cmd = termite -e "alsamixer"
+	icon = NULL
+
+	item = MPD
+	cmd = sudo mpd
+	icon = NULL
+
+	item = mpdviz
+	cmd = termite -e sh -c "mpdviz -i true"
+	icon = NULL
+
+	item = Ardour
+	cmd = ardour5
+	icon = NULL
+
+	item = QTractor
+	cmd = qtractor
+	icon = NULL
+
+	item = BitWig Studio
+	cmd = bitwig-studio
+	icon = NULL
+
+
+	item = Reaper
+	cmd = sh /home/bee/.i3/reaper.sh
+	icon = NULL
+
+Submenu = Files
+	icon = NULL
+
+	item = Ranger
+	cmd = termite -e 'ranger'
+	icon = NULL
+
+	item = Sunflower
+	cmd = sunflower
+	icon = NULL
+
+	item = MC
+	cmd = termite -e 'mc'
+	icon = NULL
+
+	item = Dolphin
+	cmd = dolphin
+	icon = NULL
+
+	item = Thunar
+	cmd = thunar
+	icon = NULL
+
+Submenu = Games
+	icon = NULL
+
+	item = Steam
+	cmd = sh /home/bee/.local/share/steamstart.sh
+	icon = NULL
+
+	item = Steam Wine
+	cmd = sh /home/bee/.local/share/steamwinestart.sh
+	icon = NULL
+
+	item = Dwarf Fortress
+	cmd = dwarffortress
+	icon = NULL
+
+	item = DwarfTherapist
+	cmd = dwarftherapist
+	icon = NULL
+
+	item = Unity
+	cmd = /opt/Unity/Editor/Unity %F
+	icon = NULL
+
+Submenu = Write
+	icon = NULL
+
+	item = Atom
+	cmd = atom
+	icon = NULL
+
+	item = Sublime Text
+	cmd = subl3
+	icon = NULL
+
+	item = Kate
+	cmd = kate
+	icon = NULL
+
+	item = VS Code
+	cmd = visual-studio-code
+	icon = NULL
+
+	item = Brackets
+	cmd = brackets
+	icon = NULL
+
+	item = Vim
+	cmd = termite -e 'vim'
+	icon = NULL
+
+	item = LibreOffice
+	cmd = libreoffice
+	icon = NULL
+
+Submenu = XAMPP
+	icon = NULL
+
+	item = LAMPP Start Apache
+	cmd = gksudo /opt/lampp/lampp startapache
+	icon = NULL
+
+	item = LAMPP Stop Apache
+	cmd = gksudo /opt/lampp/lampp stopapache
+	icon = NULL
+
+	item = LAMPP Restart Apache
+	cmd = gksudo /opt/lampp/lampp reloadapache
+	icon = NULL
+
+	item = XAMPP Panel
+	cmd = gksudo /opt/lampp/manager-linux-x64.run
+	icon = NULL
+
+Submenu = Painting
+	icon = NULL
+
+	item = Krita
+	cmd = krita
+	icon = NULL
+
+	item = Kolourpaint
+	cmd = kolourpaint
+	icon = NULL
+
+	item = Aseprite
+	cmd = aseprite
+	icon = NULL
+
+	item = Gimp
+	cmd = gimp-2.8
+	icon = NULL
+
+	item = Avocode
+	cmd = /home/bee/Avocode/avocode
+	icon = NULL
+
+	item = MtPaint
+	cmd = mtpaint
+	icon = NULL
+
+Submenu = System
+	icon = NULL
+
+	item = HTOP
+	cmd = termite -e 'htop'
+	icon = NULL
+
+	item = Restart DZEN
+	cmd = sh /home/bee/.config/dzenScripts/startup.sh
+	icon = NULL
+
+	item = Quit
+	cmd = killall mpdscribble && bspc quit
+	icon = NULL
+
+	item = Reboot
+	cmd = reboot
+	icon = NULL
+
+	item = Power Off
+	cmd = poweroff
+	icon = NULL
+

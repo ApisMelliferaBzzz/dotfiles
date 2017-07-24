@@ -1,0 +1,5 @@
+(echo "Task List"; wmctrl -l) | \
+    dzen2 \
+        -m -p -l 15 -x $WHEREX  -w $WIDTH -fg $FG -bg $BG -e \
+'button1=menuprint;button3=exit;entertitle=uncollapse;leaveslave=collapse' | \
+    awk '{system("wmctrl -s " $2)}'
