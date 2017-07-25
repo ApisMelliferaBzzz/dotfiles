@@ -9,7 +9,7 @@
 rounded = 0
 border_width = 0
 border_sides = TBLR
-background_color = #333333 100
+background_color = #303030 100
 border_color = #ffffff 0
 background_color_hover = #202020 100
 border_color_hover = #ffffff 0
@@ -20,7 +20,7 @@ border_color_pressed = #ffffff 0
 rounded = 0
 border_width = 0
 border_sides = TBLR
-background_color = #222222 100
+background_color = #202020 100
 border_color = #ffffff 40
 background_color_hover = #161616 100
 border_color_hover = #ffffff 40
