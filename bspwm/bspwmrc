@@ -34,7 +34,7 @@ bspc rule -a "Steam — Новости обновлений" floating=on
 
 feh --bg-tile ~/Media_storage/images/afterlife1080gauss1.png &
 start-pulseaudio-x11 &
-sudo mpd &
+mpd &
 xsetroot -cursor_name left_ptr &
 conky &
 synclient TapButton1=1 TapButton2=3 TapButton3=2 &
