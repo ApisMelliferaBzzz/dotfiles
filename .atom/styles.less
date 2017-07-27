@@ -1,0 +1,118 @@
+@dark: #202020;
+@light: #303030;
+@border: #404040;
+@text: #888;
+@dark-accent: #226677;
+@light-accent: #228899;
+
+.tab-bar {
+  box-shadow: inset 0 -1px 0 @light;
+  background: @light;
+  height: 20px;
+}
+
+atom-dock .tab-bar .tab.active {
+  background-color: @dark;
+  color: @text;
+}
+
+.tree-view {
+  background: @dark;
+}
+
+.tab-bar .tab {
+  background-color: @light;
+  border-left: none;
+  color: @text;
+  line-height: 1.8em;
+}
+.tab-bar .tab:last-of-type {
+  box-shadow: inset 0 -1px 0 @light, 1px 0 0 @light;
+}
+
+.tab-bar .tab.active[data-type$="Editor"] {
+  background-color: @dark;
+  color: @text;
+}
+
+.tree-view .selected:before {
+  background: @light;
+}
+
+.scrollbars-visible-always atom-text-editor ::-webkit-scrollbar-thumb {
+  background: @border;
+}
+.scrollbars-visible-always ::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  border: none;
+}
+.scrollbars-visible-always atom-text-editor ::-webkit-scrollbar-track {
+  background: none;
+}
+.scrollbars-visible-always ::-webkit-scrollbar-track {
+  background: none;
+}
+.scrollbar-corner > div {
+  height: 0 !important;
+  width: 0 !important;
+}
+
+atom-pane.active .tab.active:before {
+  // background: @dark-accent;
+  background: none;
+}
+
+.tab-bar .tab.modified:not(:hover) .close-icon {
+  color: @light-accent;
+}
+
+.tab-bar .tab .close-icon:hover {
+  background-color: @light-accent;
+}
+
+atom-pane-container atom-pane {
+  border-bottom: none;
+  border-right: none;
+}
+
+.atom-dock-inner.atom-dock-open.left {
+  border-right: none;
+}
+
+.gutter {
+  background: @dark;
+}
+.line-numbers {
+  background-color: @dark !important;
+  > div {
+    background-color: @dark !important;
+  }
+}
+
+atom-text-editor .gutter .line-number.cursor-line {
+  background: @dark;
+}
+
+atom-text-editor .line.cursor-line {
+  background: @light;
+}
+
+atom-text-editor .cursor {
+  color: @light-accent;
+}
+
+atom-text-editor {
+  background: @dark;
+}
+
+.status-bar {
+  background-color: #202020;
+}
+
+atom-text-editor .indent-guide {
+  color: @border;
+}
+
+.editor .selection .region {
+  background: @light;
+}

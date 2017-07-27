@@ -1,0 +1,23 @@
+"*":
+  "color-picker":
+    automaticReplace: true
+  core:
+    autoHideMenuBar: true
+    disabledPackages: [
+      "vim-mode"
+      "minimap"
+    ]
+    telemetryConsent: "no"
+  editor:
+    backUpBeforeSaving: true
+    fontFamily: "Roboto Mono"
+    fontSize: 17
+    invisibles: {}
+    lineHeight: 1.2
+    scrollPastEnd: true
+    showIndentGuide: true
+  "exception-reporting":
+    userId: "f336575b-64be-6bf1-ae6d-1fb756de4913"
+  "one-dark-ui": {}
+  welcome:
+    showOnStartup: false
