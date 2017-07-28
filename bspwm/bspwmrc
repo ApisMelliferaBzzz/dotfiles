@@ -30,7 +30,7 @@ bspc rule -a "Steam — Новости обновлений" floating=on
 #bspc config normal_locked_border_color "#225566"
 #bspc config active_locked_border_color "#225566"
 #bspc config urgent_border_color "#222222"
-#bspc config presel_border_color "#A4A7A8"
+bspc config presel_feedback_color "#303030"
 
 feh --bg-tile ~/Media_storage/images/afterlife1080gauss1.png &
 start-pulseaudio-x11 &

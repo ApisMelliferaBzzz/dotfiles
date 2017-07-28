@@ -80,15 +80,15 @@ alt + {_,shift + }{1-9,0}
 
 # Resize nodes
 ctrl + shift + {h,l}
-#    S={-,+}; \
-#    bspc node -e left $\{S\}20 || \
-#    bspc node -e right $\{S\}20
-	bspc node -z left {-,+}20 0 || \
-	bspc node -z right {-,+}20 -
+    S={-,+}; \
+    bspc node -z left $\{S\}20 0|| \
+    bspc node -z right $\{S\}20 0
+#	bspc node -z left {-,+}20 0 || \
+#	bspc node -z right {-,+}20 0
 ctrl + shift + {j,k}
-#    S={+,-}; \
-	bspc node -z down {-,+}20 0 || \
-	bspc node -z up {-,+}20 0
+    S={+,-}; \
+	bspc node -z bottom 0 $\{S\}20 || \
+	bspc node -z top 0 $\{S\}20
 #alt + ctrl + shift +
 
 # Balance tree
