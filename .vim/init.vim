@@ -1,7 +1,7 @@
 syntax on
 "colorscheme luna
 "colorscheme lucius
-colorscheme one-modded
+colorscheme onemodded
 "irlineTheme lucius
 "mtom/tlib_vim"
 autocmd vimenter
@@ -29,6 +29,28 @@ set nocompatible
 set number
 set laststatus=2
 filetype off  "обязательно!
+
+let g:onedark_color_overrides = {
+\ "red": { "gui": "#777777", "cterm": "204", "cterm16": "1" },
+\ "dark_red": { "gui": "#F07178", "cterm": "196", "cterm16": "9" },
+\ "green": { "gui": "#CCCCCC", "cterm": "114", "cterm16": "2" },
+\ "yellow": { "gui": "#666666", "cterm": "180", "cterm16": "3" },
+\ "dark_yellow": { "gui": "#555555", "cterm": "173", "cterm16": "11" },
+\ "blue": { "gui": "#595959", "cterm": "39", "cterm16": "4" },
+\ "purple": { "gui": "#AAAAAA", "cterm": "170", "cterm16": "5" },
+\ "cyan": { "gui": "#BBBBBB", "cterm": "38", "cterm16": "6" },
+\ "white": { "gui": "#999999", "cterm": "145", "cterm16": "7" },
+\ "black": { "gui": "#0d0d0d", "cterm": "235", "cterm16": "0" },
+\ "visual_black": { "gui": "NONE", "cterm": "NONE", "cterm16": "0" },
+\ "comment_grey": { "gui": "#333333", "cterm": "59", "cterm16": "15" },
+\ "gutter_fg_grey": { "gui": "#454545", "cterm": "238", "cterm16": "15" },
+\ "cursor_grey": { "gui": "#111111", "cterm": "236", "cterm16": "8" },
+\ "visual_grey": { "gui": "#222222", "cterm": "237", "cterm16": "15" },
+\ "menu_grey": { "gui": "#222222", "cterm": "237", "cterm16": "8" },
+\ "special_grey": { "gui": "#222222", "cterm": "238", "cterm16": "15" },
+\ "vertsplit": { "gui": "#111111", "cterm": "59", "cterm16": "15" }
+\}
+
 
 set rtp+=~/.vim/bundle/Vundle.vim
 

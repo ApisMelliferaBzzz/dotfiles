@@ -69,7 +69,7 @@ bindkey "^[[1;5C" forward-word
 
 #alias mocp="mocp -T trans"
 alias -g pacman="sudo pacman"
-alias -g vi="NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
+#alias -g vi="NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 #alias -g yaourt="sudo yaourt"
 alias -g abs="sudo abs"
 alias -g ls="ls --color=auto"

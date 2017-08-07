@@ -28,7 +28,7 @@ while true; do
 	echo -en "^pa(146;6)^bg($BGD)^fg($IFG)^i("$PAT"/icons/mem.xbm) ^p(;-1)$(get_mem)   " &
 	echo -en "^pa(279;6)^bg($BGD)^fg($IFG)^i("$PAT"/icons/cpu.xbm) ^p(;-1)$(get_cpu)" &
 	echo -en "^pa(402;6)^bg($BGD) $(get_net)  "
-	echo "^pa(428;4)^fg($FG)^bg($BGL)$(get_date)^pa(;0)^i($PAT/icons/tag.xpm) " #иконка - костыль для светлого фона после даты
+	echo "^pa(428;4)^fg($FG)^bg($BGL)$(get_date)^pa(;0)^i($PAT/icons/black/tag.xpm) " #иконка - костыль для светлого фона после даты
 	sleep 1
 	# wait;
 done

@@ -4,10 +4,15 @@
   core:
     autoHideMenuBar: true
     disabledPackages: [
-      "vim-mode"
       "minimap"
+      "vim-mode"
+      "vim-mode-plus"
     ]
     telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "beta-syntax"
+    ]
   editor:
     backUpBeforeSaving: true
     fontFamily: "Roboto Mono"
