@@ -1,6 +1,8 @@
 URxvt*transparent: false
+urxvt*depth: 32
+urxvt*background: rgba:0000/0000/0200/c800
 !!URxvt.shading: 100
-!!URxvt.fading: 30
+!!URxvt.fading: 70
 URxvt*scrollBar:false
 !!URxvt.perl-ext-common:  default,clipboard,url-select,keyboard-select!!,!!tabbed
 !!URxvt*perl-ext:default,url-select
@@ -91,7 +93,7 @@ URxvt.internalBorder: 0
 #B&W
 #By zezik
 *foreground:   #A0A0A0
-*background:   #101010
+#*background:   #101010
 *cursorColor:  #999999
 *color0:       #FBFBFB
 *color8:       #494949
