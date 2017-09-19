@@ -32,7 +32,7 @@ get_progress() {
 # }
 while true; do
 	echo -en "^bg($BGD)^pa(0;0)^fg($IFG)^ib(0)^ca(1,mygtkmenu "$PAT"/LaunchMenuTop)^i("$PAT"/icons/arch_10x10_black.xpm)"
-	echo -en " ^ca()^pa(22;0)$(get_pager)"
+	echo -en $(get_pager)
 	echo "^pa(245;0)^bg($BGL)^fg($IFG)$(get_progress)^bg($BGL)"
 	# echo -en "^pa(1368;6)^bg(#222)  ^fg($IFG)$(get_batIcon) " &
 	# echo -en "^pa(1394;5)^bg(#222)$(get_bat)   " &
