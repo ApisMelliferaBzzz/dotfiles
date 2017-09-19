@@ -22,7 +22,7 @@ else
 	CURRENT="^fg($FG)MPD server is not running"
 fi
 
-echo -en " ^pa(232;2)^bg($BGL)^fg($IFG)^p(;2)^i($PAT/icons/$ICON.xbm)$CONTROLS $CURRENT ^ca()^ca()^ca()^ca()^bg($BGL)"
+echo -en "^pa(230;2)^bg($BGL)^fg($IFG)^p(;2)^i($PAT/icons/$ICON.xbm)$CONTROLS $CURRENT ^ca()^ca()^ca()^ca()^bg($BGL)"
 
 #LENGTH=$(echo "${#CURRENT} * 6" | bc -l)
 #PERC=$(mpc -h "bucCelLati@0.0.0.0" | awk -F"(" 'NR == 2 {print $2}' | awk -F"%" '{print $1}')

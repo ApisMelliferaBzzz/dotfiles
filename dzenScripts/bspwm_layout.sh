@@ -21,4 +21,4 @@ else
 fi
 
 
-echo "^bg($BGL)^fg(#606060)^pa(207;3)^i($PAT/icons/$STR.xbm)";
+echo "^bg($BGL)^fg(#606060)^pa(205;3)^i($PAT/icons/$STR.xbm)";
