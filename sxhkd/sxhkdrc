@@ -142,9 +142,18 @@ alt + Escape
 	killall sxhkd && sxhkd
 #    pkill -USR1 -x sxhkd
 {Super_L,Super_R}
-	mygtkmenu /home/bee/.i3/LaunchMenuTop
-~button8
-	sh /home/bee/.i3/get_position.sh
+	mygtkmenu /home/bee/.config/dzenScripts/LaunchMenuTop
+#~button8
+#	sh /home/bee/.i3/get_position.sh
 
 super + alt + Escape
 	bspc wm -d > "$BSPWM_STATE" && bspc quit
+
+
+XF86MonBrightnessUp
+	xbacklight -inc 10 || \
+	twmnc -t 'Brightness' -c '+10%'
+
+XF86MonBrightnessDown
+	xbacklight -dec 10 || \
+	twmnc -t 'Brightness' -c '-10%'

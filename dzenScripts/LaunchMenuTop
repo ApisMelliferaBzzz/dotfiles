@@ -231,7 +231,7 @@ Submenu = System
 	icon = NULL
 
 	item = Restart DZEN
-	cmd = sh /home/bee/.config/dzenScripts/startup.sh
+	cmd = sh /home/bee/.config/dzenScripts/startup-weird.sh
 	icon = NULL
 
 	item = Quit

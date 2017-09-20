@@ -32,16 +32,18 @@ bspc rule -a "Steam — Новости обновлений" floating=on
 #bspc config urgent_border_color "#222222"
 bspc config presel_feedback_color "#303030"
 
-feh --bg-tile ~/Media_storage/images/afterlife1080gauss1.png &
-start-pulseaudio-x11 &
-mpd &
+#feh --bg-tile ~/Media_storage/images/afterlife1080gauss1.png &
+feh --bg-tile ~/Media_storage/images/forest-fog-b\&w.jpg &
 xsetroot -cursor_name left_ptr &
 conky &
 synclient TapButton1=1 TapButton2=3 TapButton3=2 &
 sxhkd &
 tint2 &
 compton &
+twmnd &
 #urxvtd &
 wmname LG3D &
-clipit &
-sleep 2 && sh ~/.config/dzenScripts/startup.sh
+#clipit &
+sleep 2 && sh ~/.config/dzenScripts/startup-weird.sh &
+#sleep 2 && mpd
+start-pulseaudio-x11 && mpd &

@@ -4,29 +4,16 @@ source /home/bee/.config/dzenScripts/vars.sh
 get_pager() {
 	$PAT/ewmhPager.sh
 }
-get_mpd() {
-	$PAT/music.sh
-}
 get_progress() {
-	$PAT/progress_bar.sh
-}
-get_bat() {
-	$PAT/battery.sh
-}
-get_cpu() {
-	$PAT/cpubar.sh
-}
-get_batIcon() {
-	$PAT/batIcon.sh
-}
-get_mem() {
-	$PAT/mem.sh
-}
-get_date() {
-	$PAT/date.sh
-}
-get_net() {
-	$PAT/internet.sh
+	if [ -n "$(pgrep mpd)" ]; then
+		TITLE=$(mpc -h "bucCelLati@0.0.0.0" current -f '%artist% - %title% (%date% - %album%)')
+		LENGTH=$(echo "${#TITLE} * 6" | bc -l)
+		PERC=$(mpc -h "bucCelLati@0.0.0.0" | awk -F"(" 'NR == 2 {print $2}' | awk -F"%" '{print $1}')
+		eval echo "$PERC | gdbar -h '2' -w '$LENGTH' -fg '$GFG' -bg '$BGD'"
+	else
+		eval echo "100 | gdbar -h '2' -w '1' -fg '$BGD' -bg '$BGD'"
+	fi
+
 }
 # get_bat() {
 # 	/home/bee/.config/dzenScripts/battery.sh
@@ -45,8 +32,8 @@ get_net() {
 # }
 while true; do
 	echo -en "^bg($BGD)^pa(0;0)^fg($IFG)^ib(0)^ca(1,mygtkmenu "$PAT"/LaunchMenuTop)^i("$PAT"/icons/arch_10x10_black.xpm)"
-	echo -en " ^ca()^pa(22;0)$(get_pager)"
-	echo "^pa(207;4)^bg($BGL)^fg($IFG)$(get_mpd) ^ca()^ca()^ca()^ca()^bg($BGL)"
+	echo -en $(get_pager)
+	echo "^pa(243;0)^bg($BGL)^fg($IFG)$(get_progress)^bg($BGL)"
 	# echo -en "^pa(1368;6)^bg(#222)  ^fg($IFG)$(get_batIcon) " &
 	# echo -en "^pa(1394;5)^bg(#222)$(get_bat)   " &
 	# echo -en "^pa(1512;6)^bg(#222)^fg($IFG)^i(/home/bee/.dzen/icons/mem.xbm) ^p(;-1)$(get_mem)   " &

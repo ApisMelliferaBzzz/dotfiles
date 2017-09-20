@@ -28,6 +28,9 @@ get_date() {
 get_net() {
 	$PAT/internet.sh
 }
+get_layout() {
+	$PAT/bspwm_layout.sh
+}
 # get_bat() {
 # 	/home/bee/.config/dzenScripts/battery.sh
 # }
@@ -44,9 +47,10 @@ get_net() {
 # 	/home/bee/.config/dzenScripts/date.sh
 # }
 while true; do
-	echo -en "^bg($BGD)^pa(0;0)^fg($IFG)^ib(0)^ca(1,mygtkmenu "$PAT"/LaunchMenuTop)^i("$PAT"/icons/arch_10x10_black.xpm)"
-	echo -en " ^ca()^pa(22;0)$(get_pager)"
-	echo "^pa(207;4)^bg($BGL)^fg($IFG)$(get_mpd) ^ca()^ca()^ca()^ca()^bg($BGL)"
+	echo -en "^bg($BGD)^pa(0;-2)^fg($IFG)^ib(0)^ca(1,mygtkmenu "$PAT"/LaunchMenuTop)^i("$PAT"/icons/arch_10x10_black.xpm)"
+	echo -en $(get_pager)
+	echo -en $(get_layout)
+	echo $(get_mpd)
 	# echo -en "^pa(1368;6)^bg(#222)  ^fg($IFG)$(get_batIcon) " &
 	# echo -en "^pa(1394;5)^bg(#222)$(get_bat)   " &
 	# echo -en "^pa(1512;6)^bg(#222)^fg($IFG)^i(/home/bee/.dzen/icons/mem.xbm) ^p(;-1)$(get_mem)   " &
