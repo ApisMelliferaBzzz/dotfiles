@@ -43,6 +43,5 @@ for (( i = 0; i <= 9; i++ )); do
 		fi
 	fi
 done
-	# echo
 	# sleep 0.1
 # done
