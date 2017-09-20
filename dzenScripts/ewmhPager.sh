@@ -1,5 +1,4 @@
 #!/bin/sh
-# while true; do
 source /home/bee/.config/dzenScripts/vars.sh
 OCCUP=( false false false false false false false false false false )
 
