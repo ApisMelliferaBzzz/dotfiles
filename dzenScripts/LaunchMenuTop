@@ -21,6 +21,10 @@ Submenu = Internet
 	cmd = dwb
 	icon = NULL
 
+	item = GitKraken
+	cmd = gitkraken
+	icon = NULL
+
 	item = Deluge
 	cmd = deluge
 	icon = NULL
@@ -245,4 +249,3 @@ Submenu = System
 	item = Power Off
 	cmd = poweroff
 	icon = NULL
-
