@@ -27,7 +27,7 @@ while true; do
 	# echo -en "^pa(22;0)$(get_pager)" &
 	# echo -en "^pa(207;4)^bg(#333)^fg($IFG)$(get_mpd) ^ca()^ca()^ca()^ca()" &
 	# echo -en "^pa(0;6)^bg($BGD)  ^fg($IFG)$(get_batIcon)"
-	echo -en "^pa(0;6)^bg($BGD)  ^fg($IFG)$(get_vol)"
+	echo -en "^pa(0;6)^bg($BGD)  ^fg($IFG)$(get_vol)^ca()^ca()"
 	# echo -en "^pa(21;5)^bg($BGD) $(get_bat)   "
 	echo -en "^pa(146;6)^bg($BGD)^fg($IFG)^i("$PAT"/icons/mem.xbm) ^p(;-1)$(get_mem)   "
 	echo -en "^pa(279;6)^bg($BGD)^fg($IFG)^i("$PAT"/icons/cpu.xbm) ^p(;-1)$(get_cpu)"

@@ -13,5 +13,5 @@ else
     echo -en "^fg(#303030)"
 fi
 
-echo -en "^i("$PAT"/icons/spkr_01.xbm)^p(5;-1)"
+echo -en "^ca(4, amixer sset Master 10%+ )^ca(5, amixer sset Master 10%- )^i("$PAT"/icons/spkr_01.xbm)^p(5;-1)"
 eval echo $vol $GDBAR
