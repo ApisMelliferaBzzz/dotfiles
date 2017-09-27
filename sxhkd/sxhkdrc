@@ -3,11 +3,11 @@
 #
 
 XF86AudioMute
-	exec amixer set Master toggle
+	exec amixer sset Master toggle
 XF86AudioRaiseVolume
-	exec amixer set PCM 3dB+
+	exec amixer sset Master 10%+
 XF86AudioLowerVolume
-	exec amixer set PCM 3dB-
+	exec amixer sset Master 10%-
 
 alt + z
 	mpc -h bucCelLati@0.0.0.0 prev
@@ -151,9 +151,9 @@ super + alt + Escape
 
 
 XF86MonBrightnessUp
-	xbacklight -inc 10 || \
+	brightnessctl s 1+ || \
 	twmnc -t 'Brightness' -c '+10%'
 
 XF86MonBrightnessDown
-	xbacklight -dec 10 || \
+	brightnessctl s 1- || \
 	twmnc -t 'Brightness' -c '-10%'

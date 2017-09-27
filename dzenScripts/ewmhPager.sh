@@ -21,7 +21,7 @@ done
 # ICN = Icon Current NotOcupied
 # INN = Icon NotCurrent NotOccupied
 
-echo -en " ^ca()^pa(22;)"
+echo -en " ^ca()^pa(21;)"
 
 for (( i = 0; i <= 9; i++ )); do
 	if [[ ${OCCUP[$i]} == true ]]; then
