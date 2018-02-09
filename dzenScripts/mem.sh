@@ -1,5 +1,5 @@
 #!/bin/sh
-source /home/bee/.config/dzenScripts/vars.sh
+source ./vars.sh
 TOTALMEM=$(free | gawk '{if (NR==2) {print $2}}')
 USEDMEM=$(free | gawk '{if (NR==2) {print $3}}')
 MBAR=$(( $(echo "scale = 0; $USEDMEM * 100 / $TOTALMEM" | bc -l ) ))

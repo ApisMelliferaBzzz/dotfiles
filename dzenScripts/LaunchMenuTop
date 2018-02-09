@@ -21,6 +21,10 @@ Submenu = Internet
 	cmd = dwb
 	icon = NULL
 
+	item = Slack
+	cmd = slack
+	icon = NULL
+
 	item = GitKraken
 	cmd = gitkraken
 	icon = NULL

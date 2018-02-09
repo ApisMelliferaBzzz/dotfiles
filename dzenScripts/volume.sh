@@ -1,5 +1,5 @@
 #!/bin/sh
-source /home/bee/.config/dzenScripts/vars.sh
+source ./vars.sh
 
 isMute=`amixer get Master | grep "Front Left:" | awk '{print $6}'`
 if [ $isMute == "[on]" ]; then
@@ -13,5 +13,5 @@ else
     echo -en "^fg(#303030)"
 fi
 
-echo -en "^ca(4, amixer sset Master 10%+ )^ca(5, amixer sset Master 10%- )^i("$PAT"/icons/spkr_01.xbm)^p(5;-1)"
+echo -en "^ca(4, amixer sset Master 10%+ )^ca(5, amixer sset Master 10%- )^i(./icons/spkr_01.xbm)^p(5;-1)"
 eval echo $vol $GDBAR

@@ -1,6 +1,6 @@
 #!/bin/sh
 #sh .config/dzenScripts/ewmhPanel.sh | dzen2 -x 0 -y 0 -h 21 -w 1920 -ta l -fn 'Terminus:pixelsize=12' -bg '#333'
-source /home/bee/.config/dzenScripts/vars.sh
+source ../vars.sh
 get_vol() {
 	./volume_popup_handler.sh
 }
