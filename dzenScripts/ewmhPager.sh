@@ -1,5 +1,5 @@
 #!/bin/sh
-source /home/bee/.config/dzenScripts/vars.sh
+source ./vars.sh
 OCCUP=( false false false false false false false false false false )
 
 # FIND CURRENT DESCTOP
@@ -21,14 +21,13 @@ done
 # ICN = Icon Current NotOcupied
 # INN = Icon NotCurrent NotOccupied
 
-echo -en " ^ca()^pa(21;)"
+echo -en " ^ca()^pa(40;)"
 
 for (( i = 0; i <= 9; i++ )); do
 	if [[ ${OCCUP[$i]} == true ]]; then
 		if [[ $CURRENT == $i ]]; then
 			# current + occupied
 			echo -en "^ca(1,wmctrl -s  $i )$ICO^ca()"
-			# echo -en "^ca(1,wmctrl -s " $i ")^i(/home/bee/.dzen/icons/tag_curr_occup.xpm)^ca()"
 		else
 			# occupied
 			echo -en "^ca(1,wmctrl -s  $i )$INO^ca()"
@@ -43,5 +42,3 @@ for (( i = 0; i <= 9; i++ )); do
 		fi
 	fi
 done
-	# sleep 0.1
-# done

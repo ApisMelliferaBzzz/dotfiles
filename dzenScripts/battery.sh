@@ -1,5 +1,5 @@
 #!/bin/sh
-source /home/bee/.config/dzenScripts/vars.sh
+source ./vars.sh
 CHARGE=$(upower -d | gawk '{if (NR==23) {print $2}}')
 
 # if [[ $CHARGE = 'charging' ]]; then 

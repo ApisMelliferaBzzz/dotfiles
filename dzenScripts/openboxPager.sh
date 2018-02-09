@@ -20,18 +20,18 @@ for (( i = 0; i <= 9; i++ )); do
 	if [[ ${OCCUP[$i]} == true ]]; then
 		if [[ $CURRENT == $i ]]; then
 			# current + occupied
-			echo -en "^ca(1,wmctrl -s " $i ")^i("$PAT"/icons/tag_curr_occup.xpm)^ca()"
+			echo -en "^ca(1,wmctrl -s " $i ")^i(./icons/tag_curr_occup.xpm)^ca()"
 		else
 			# occupied
-			echo -en "^ca(1,wmctrl -s " $i ")^i("$PAT"/icons/tag_occup.xpm)^ca()"
+			echo -en "^ca(1,wmctrl -s " $i ")^i(./icons/tag_occup.xpm)^ca()"
 		fi
 	else
 		if [[ $CURRENT == $i ]]; then
 			# current + not occupied
-			echo -en "^ca(1,wmctrl -s " $i ")^i("$PAT"/icons/tag_curr.xpm)^ca()"
+			echo -en "^ca(1,wmctrl -s " $i ")^i(./icons/tag_curr.xpm)^ca()"
 		else
 			# not occupied
-			echo -en "^ca(1,wmctrl -s " $i ")^i("$PAT"/icons/tag.xpm)^ca()"
+			echo -en "^ca(1,wmctrl -s " $i ")^i(./icons/tag.xpm)^ca()"
 		fi
 	fi
 done

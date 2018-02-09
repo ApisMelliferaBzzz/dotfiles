@@ -1,5 +1,5 @@
 #!/bin/sh
-source /home/bee/.config/dzenScripts/vars.sh
+source ./vars.sh
 get_mpd_control() {
 	if [ -n "$(pgrep mpd)" ]; then
 		TITLE=$(mpc -h "bucCelLati@0.0.0.0" current -f '%artist% - %title% (%date% - %album%)')
