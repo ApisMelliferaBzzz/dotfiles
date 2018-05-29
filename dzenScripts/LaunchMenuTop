@@ -238,6 +238,11 @@ Submenu = System
 	cmd = termite -e 'htop'
 	icon = NULL
 
+
+	item = Detect Monitors
+	cmd = sh /home/bee/.config/dzenScripts/detectMonitors.sh
+	icon = NULL
+
 	item = Restart DZEN
 	cmd = sh /home/bee/.config/dzenScripts/startup-weird.sh
 	icon = NULL
