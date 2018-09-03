@@ -2,11 +2,11 @@
 
 # dependencies
 wm:
-bspwm
-sxhkd
-conky
-tint2
-compton
+- bspwm
+- sxhkd
+- conky
+- tint2
+- compton
 
 
 panel:
