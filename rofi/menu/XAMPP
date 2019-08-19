@@ -1,0 +1,31 @@
+#!/bin/bash
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+cd $parent_path
+source ../vars.sh
+cd ~/.
+
+star="LAMPP START APACHE"
+stop="LAMPP STOP APACHE"
+rest="LAMPP RESTART APACHE"
+pane="XAMPP PANEL"
+
+another=$(echo "$star
+$stop
+$rest
+$pane" | rofi "${ROFI_OPTIONS[@]}" -dmenu -i -p "XAMPP: ")
+
+if [ "$another" == "$star" ] ; then
+	gksudo /opt/lampp/lampp startapache
+
+elif [ "$another" == "$stop" ] ; then
+	gksudo /opt/lampp/lampp stopapache
+
+elif [ "$another" == "$rest" ] ; then
+	gksudo /opt/lampp/lampp reloadapache
+
+elif [ "$another" == "$pane" ] ; then
+	gksudo /opt/lampp/manager-linux-x64.run
+
+else
+  exec nohup $another > /dev/null 2>&1 &
+fi

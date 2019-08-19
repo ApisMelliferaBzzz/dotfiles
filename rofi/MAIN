@@ -1,0 +1,79 @@
+#!/bin/bash
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+cd $parent_path
+source ./vars.sh
+cd ~/.
+
+apps="RUN APP"
+sodo="SUDO RUN"
+clip=CLIPBOARD
+inet=INTERNET
+term=TERMINAL
+srch=DUCKDUCKGO
+vide=VIDEO
+audi=AUDIO
+file=FILES
+game=GAMES
+code=CODE
+pain=PAINT
+syst=SYSTEM
+
+another=$(echo "$apps
+$srch
+$clip
+$inet
+$code
+$vide
+$audi
+$file
+$game
+$pain
+$term
+$syst" | rofi "${ROFI_OPTIONS[@]}" -dmenu -i -p "MENU: ")
+
+if [ "$another" == "$srch" ] ; then
+	# firefox --new-tab --url "duckduckgo.com/?q=$(rofi '${ROFI_OPTIONS[@]}' -kb-row-select 'Tab' -kb-row-tab 'Control+space' -kb-cancel 'Escape' -dmenu -i -p 'DUCK: ')"
+	SURFRAW_duckduckgo_use_javascript=1 surfraw duckduckgo $(rofi "${ROFI_OPTIONS[@]}" -kb-row-select 'Tab' -kb-row-tab 'Control+space' -kb-cancel 'Escape' -dmenu -i -p 'DUCK: ')
+
+elif [ "$another" == "$term" ] ; then
+	termite
+
+elif [ "$another" == "$clip" ] ; then
+	rofi "${ROFI_OPTIONS[@]}" -modi "clipboard:greenclip print" -show clipboard
+
+elif [ "$another" == "$inet" ] ; then
+	bash ~/.config/rofi/menu/INTERNET;
+
+elif [ "$another" == "$vide" ] ; then
+	bash ~/.config/rofi/menu/VIDEO;
+
+elif [ "$another" == "$audi" ] ; then
+	bash ~/.config/rofi/menu/AUDIO;
+
+elif [ "$another" == "$file" ] ; then
+	bash ~/.config/rofi/menu/FILES;
+
+elif [ "$another" == "$game" ] ; then
+	bash ~/.config/rofi/menu/GAMES;
+
+elif [ "$another" == "$code" ] ; then
+	bash ~/.config/rofi/menu/CODE;
+
+elif [ "$another" == "$pain" ] ; then
+	bash ~/.config/rofi/menu/PAINT;
+
+elif [ "$another" == "$syst" ] ; then
+	bash ~/.config/rofi/menu/SYSTEM;
+
+elif [ "$another" == "$apps" ] ; then
+	rofi "${ROFI_OPTIONS[@]}" -show drun -show-icons -i -p "run: "
+
+elif [ "$another" == "$sodo" ] ; then
+	SUDO_ASKPASS=/home/bee/.sbin/askpass rofi "${ROFI_OPTIONS[@]}" -modi 'run,drun' -show drun -theme-str "*{accent: #e53714;}" -run-command 'sudo -A {cmd}'
+
+elif [ -z "$another" ] ; then
+	echo "variable empty"
+
+else
+  exec nohup $another > /dev/null 2>&1 &
+fi

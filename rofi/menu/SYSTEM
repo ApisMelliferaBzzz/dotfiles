@@ -1,0 +1,32 @@
+#!/bin/bash
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+cd $parent_path
+source ../vars.sh
+
+another=$(echo "RELOAD
+SUSPEND
+LOGOUT
+REBOOT
+POWOFF" | awk '{print $(NF-1)}' | rofi "${ROFI_OPTIONS[@]}" -dmenu -i -p "SYSTEM: ")
+
+if [ "$another" == "RELOAD" ] ; then
+	echo 'awesome.restart()' | awesome-client
+
+elif [ "$another" == "LOCKWM" ] ; then
+	exec  ~/.config/i3lock/blurlock;
+
+elif [ "$another" == "LOGOUT" ] ; then
+	[ $(echo -e "YES\nNO" | rofi "${ROFI_OPTIONS[@]}" -theme-str "*{accent: #e53714;}" -dmenu -i -p "LOGOUT") == YES ] && echo "awesome.quit()" | awesome-client
+	
+elif [ "$another" == "REBOOT" ] ; then
+	[ $(echo -e "YES\nNO" | rofi "${ROFI_OPTIONS[@]}" -theme-str "*{accent: #e53714;}" -dmenu -i -p "REBOOT") == YES ] && reboot
+	
+elif [ "$another" == "POWOFF" ] ; then
+	[ $(echo -e "YES\nNO" | rofi "${ROFI_OPTIONS[@]}" -theme-str "*{accent: #e53714;}" -dmenu -i -p "POWOFF") == YES ] && poweroff
+
+elif [ "$another" == "SUSPEND" ] ; then
+	[ $(echo -e "YES\nNO" | rofi "${ROFI_OPTIONS[@]}" -theme-str "*{accent: #e53714;}" -dmenu -i -p "SUSPEND") == YES ] && systemctl suspend
+
+else
+    echo $another
+fi

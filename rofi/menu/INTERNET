@@ -1,0 +1,68 @@
+#!/bin/bash
+# FOREGROUND="#D0D0D0"
+# # FOREGROUND=$(xrdb -query | grep 'color6:'| awk 'NR==1{print $NF}')
+# ROFI_OPTIONS=(-theme $HOME/.config/rofi/rofi_full -font "Roboto 16" -m 0 -fullscreen 0 -theme-str "*{accent: $FOREGROUND;}")
+# # ROFI_OPTIONS=(-theme $HOME/.config/rofi/rofi_full -m 0 -theme-str "*{accent: ${FOREGROUND:-#000000};}")
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+cd $parent_path
+source ../vars.sh
+
+
+fire=FIREFOX
+chro=CHROME
+dwb=DWB
+slac=SLACK
+disc=DISCORD
+tele=TELEGRAM
+vk=VK
+krak=GITKRAKEN
+delu=DELUGE
+wicd=WICD
+
+another=$(echo "$fire
+$chro
+$krak
+$tele
+$delu
+$dwb
+$slac
+$disc
+$vk
+$wicd" | rofi "${ROFI_OPTIONS[@]}" -dmenu -i -p "INTERNET: ")
+
+if [ "$another" == "$fire" ] ; then
+	firefox
+
+elif [ "$another" == "$chro" ] ; then
+	google-chrome-stable
+
+elif [ "$another" == "$dwb" ] ; then
+	termite -e dwb
+
+elif [ "$another" == "$slac" ] ; then
+	slack
+
+elif [ "$another" == "$disc" ] ; then
+	doscord
+
+elif [ "$another" == "$tele" ] ; then
+	telegram-desktop
+
+elif [ "$another" == "$vk" ] ; then
+	vk-messenger
+
+elif [ "$another" == "$krak" ] ; then
+	gitkraken
+
+elif [ "$another" == "$delu" ] ; then
+	deluge
+
+elif [ "$another" == "$wicd" ] ; then
+	termite -e wicd-curses
+
+elif [ -z "$another" ] ; then
+	echo "variable empty"
+
+else
+  exec nohup $another > /dev/null 2>&1 &
+fi

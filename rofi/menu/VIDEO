@@ -1,0 +1,20 @@
+#!/bin/bash
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+cd $parent_path
+source ../vars.sh
+
+fold="VIDEO FOLDER"
+bomi=BOMI
+
+another=$(echo "$fold
+$bomi" | rofi "${ROFI_OPTIONS[@]}" -dmenu -i -p "INTERNET: ")
+
+if [ "$another" == "$fold" ] ; then
+	cd /home/bee/Media_storage/Video && termite -e ranger && cd
+
+elif [ "$another" == "$bomi" ] ; then
+	bomi
+
+else
+  exec nohup $another > /dev/null 2>&1 &
+fi

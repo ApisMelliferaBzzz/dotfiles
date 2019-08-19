@@ -1,0 +1,31 @@
+#!/bin/bash
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+cd $parent_path
+source ../vars.sh
+cd ~/.
+
+mc=MC
+rang=RANGER
+dolp=DOLPHIN
+thun=THUNAR
+
+another=$(echo "$mc
+$rang
+$dolp
+$thun" | rofi "${ROFI_OPTIONS[@]}" -dmenu -i -p "FILES: ")
+
+if [ "$another" == "$mc" ] ; then
+	termite -e mc
+
+elif [ "$another" == "$rang" ] ; then
+	termite -e ranger
+
+elif [ "$another" == "$dolp" ] ; then
+	dolphin
+
+elif [ "$another" == "$thun" ] ; then
+	thunar
+
+else
+  exec nohup $another > /dev/null 2>&1 &
+fi

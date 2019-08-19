@@ -1,0 +1,41 @@
+#!/bin/bash
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+cd $parent_path
+source ../vars.sh
+cd ~/.
+
+atom=ATOM
+subl="SUBLIME TEXT"
+kate=KATE
+code="VS CODE"
+vim=VIM
+xamp=XAMPP
+
+another=$(echo "$code
+$atom
+$subl
+$kate
+$vim
+$xamp" | rofi "${ROFI_OPTIONS[@]}" -dmenu -i -p "CODE: ")
+
+if [ "$another" == "$atom" ] ; then
+	atom
+
+elif [ "$another" == "$subl" ] ; then
+	subl3
+
+elif [ "$another" == "$kate" ] ; then
+	kate
+
+elif [ "$another" == "$code" ] ; then
+	code
+
+elif [ "$another" == "$vim" ] ; then
+	termite -e vim
+
+elif [ "$another" == "$xamp" ] ; then
+	bash ~/.config/rofi/menu/XAMPP;
+
+else
+  exec nohup $another > /dev/null 2>&1 &
+fi

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+title="Menu:"
+widthpercent=13
+
+typeset -A menu
+menu=(
+    [Terminal]="termite"
+    [Firefox]="firefox"
+    [Discord]="discord"
+    [Bomi]="bomi"
+    [VSCode]="code"
+)

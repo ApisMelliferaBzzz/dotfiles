@@ -1,0 +1,36 @@
+#!/bin/bash
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+cd $parent_path
+source ../vars.sh
+cd ~/.
+
+stea=STEAM
+stwi="STEAM WINE"
+dwfo="SWARF FORTRESS"
+dwth=DWARFTHERAPIST
+unit=UNITY
+
+another=$(echo "$stea
+$stwi
+$dwfo
+$dwth
+$unit" | rofi "${ROFI_OPTIONS[@]}" -dmenu -i -p "GAMES: ")
+
+if [ "$another" == "$stea" ] ; then
+	steam
+
+elif [ "$another" == "$stwi" ] ; then
+	sh /home/bee/.local/share/steamwinestart.sh
+
+elif [ "$another" == "$dwfo" ] ; then
+	dwarffortress
+
+elif [ "$another" == "$dwth" ] ; then
+	dwarftherapist
+
+elif [ "$another" == "$unit" ] ; then
+	/opt/Unity/Editor/Unity %F
+
+else
+  exec nohup $another > /dev/null 2>&1 &
+fi

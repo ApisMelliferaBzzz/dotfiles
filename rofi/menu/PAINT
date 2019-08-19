@@ -1,0 +1,41 @@
+#!/bin/bash
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+cd $parent_path
+source ../vars.sh
+cd ~/.
+
+krit=KRITA
+kolo=KOLOURPAINT
+asep=ASEPRITE
+gimp=GIMP
+avoc=AVOCODE
+wine="WINE PHOTOSHOP"
+
+another=$(echo "$kolo
+$krit
+$asep
+$gimp
+$avoc
+$wine" | rofi "${ROFI_OPTIONS[@]}" -dmenu -i -p "PAINT: ")
+
+if [ "$another" == "$krit" ] ; then
+	krita
+
+elif [ "$another" == "$kolo" ] ; then
+	kolourpaint
+
+elif [ "$another" == "$asep" ] ; then
+	aseprite
+
+elif [ "$another" == "$gimp" ] ; then
+	gimp
+
+elif [ "$another" == "$avoc" ] ; then
+	/home/bee/Avocode/avocode
+
+elif [ "$another" == "$wine" ] ; then
+	wine /home/bee/.wine/drive_c/users/bee/PhotoshopSE/Photoshop.exe
+
+else
+  exec nohup $another > /dev/null 2>&1 &
+fi

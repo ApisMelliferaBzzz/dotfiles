@@ -1,0 +1,45 @@
+#!/bin/bash
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+cd $parent_path
+source ../vars.sh
+
+ncmp=NCMPCPP
+deez=DEEZER
+dead=DEADBEEF
+pavu="PULSEAUDIO VOLUME CONTROL"
+almi=ALSAMIXER
+mpd="START MPD"
+mpvi=MPDVIZ
+
+another=$(echo "$ncmp
+$deez
+$pavu
+$dead
+$almi
+$mpd
+$mpvi" | rofi "${ROFI_OPTIONS[@]}" -dmenu -i -p "AUDIO: ")
+
+if [ "$another" == "$ncmp" ] ; then
+	termite -e "ncmpcpp -h bucCelLati@0.0.0.0"
+
+elif [ "$another" == "$dead" ] ; then
+	deadbeef
+
+elif [ "$another" == "$deez" ] ; then
+	deezer
+
+elif [ "$another" == "$pavu" ] ; then
+	pavucontrol
+
+elif [ "$another" == "$almi" ] ; then
+	termite -e "alsamixer"
+
+elif [ "$another" == "$mpd" ] ; then
+	sudo mpd
+
+elif [ "$another" == "$mpvi" ] ; then
+	termite -e mpdviz -i true
+
+else
+  exec nohup $another > /dev/null 2>&1 &
+fi
