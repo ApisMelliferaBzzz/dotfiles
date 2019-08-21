@@ -67,6 +67,8 @@ theme.mouse_finder_color = "#CC9393"
 -- mouse_finder_[timeout|animate_timeout|radius|factor]
 -- }}}
 
+theme.tag_empty = themes_path .. "custom/panel/empty.png"
+theme.tag_full = themes_path .. "custom/panel/full.png"
 theme.mem_icon = themes_path .. "custom/panel/mem.png"
 theme.cpu_icon = themes_path .. "custom/panel/cpu.png"
 theme.vol_icon = themes_path .. "custom/panel/spkr.png"

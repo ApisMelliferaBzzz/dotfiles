@@ -115,10 +115,41 @@ screenCount = screen:count()
 if screenCount == 1 then
     sharedtaglist = screen[1]
 else
-    awful.tag({ "1", "2", "3", "4", "5" }, 1, awful.layout.layouts[1])
-    awful.tag({ "6", "7", "8", "9", "0" }, 2, awful.layout.layouts[1])
+    awful.tag({ "", "", "", "", "" }, 1, awful.layout.layouts[1])
+    awful.tag({ "", "", "", "", "" }, 2, awful.layout.layouts[1])
+    -- awful.tag{
+    --     names = { "1", "2", "3", "4", "5" },
+    --     screen = 1,
+    --     layout = awful.layout.layouts[1]
+    -- }
+    -- awful.tag{
+    --     names = { "6", "7", "8", "9", "0" },
+    --     screen = 2,
+    --     layout = awful.layout.layouts[1]
+    -- }
     sharedtaglist1 = screen[1]
     sharedtaglist2 = screen[2]
+end
+
+for s = 1, screenCount do
+    screen[s]:connect_signal("tag::history::update", function ()     
+            -- get a list of all tags 
+            local atags = awful.tag.gettags(s)
+            -- set the standard icon
+            for i, t in ipairs(atags) do
+                awful.tag.seticon(beautiful.tag_empty, t)
+            end
+            -- get a list of all running clients
+            local clist = client.get(s)
+            for i, c in ipairs(clist) do
+                -- get the tags on which the client is displayed
+                local ctags = c:tags()
+                for i, t in ipairs(ctags) do
+                    -- and set their icon
+                    awful.tag.seticon(beautiful.tag_full, t)
+                end
+            end
+    end)
 end
 
 awful.screen.connect_for_each_screen(function(s)
@@ -153,22 +184,6 @@ awful.screen.connect_for_each_screen(function(s)
         screen  = s,
         filter  = awful.widget.tasklist.filter.currenttags,
         buttons = tasklist_buttons,
-        widget_template = {
-            {
-                {
-                    {
-                        id     = 'text_role',
-                        widget = wibox.widget.textbox,
-                    },
-                    layout = wibox.layout.fixed.horizontal,
-                },
-                left  = 10,
-                right = 10,
-                widget = wibox.container.margin
-            },
-            id     = 'background_role',
-            widget = wibox.container.background,
-        },
     }
 
     -- s.padding.top = s.padding.top+20
