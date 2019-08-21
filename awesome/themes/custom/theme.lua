@@ -11,7 +11,8 @@ local dpi = require("beautiful.xresources").apply_dpi
 -- {{{ Main
 local theme = {}
 -- theme.wallpaper = awful.spawn("xsetroot -solid '#808080'")
-theme.wallpaper = themes_path .. "custom/background.jpg"
+theme.wallpaper1 = themes_path .. "custom/wallpaper1.jpg"
+theme.wallpaper2 = themes_path .. "custom/wallpaper2.jpg"
 -- }}}
 
 -- {{{ Styles

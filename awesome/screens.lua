@@ -79,8 +79,14 @@ local tasklist_buttons = gears.table.join(
                                           end))
 
 local function set_wallpaper(s)
-    awful.spawn("xsetroot -solid '#e0e0e0'")
     -- Wallpaper
+    if s.geometry.width == 1920 then
+        gears.wallpaper.maximized(beautiful.wallpaper1, s, true)
+    elseif s.geometry.width == 1200 then
+        gears.wallpaper.maximized(beautiful.wallpaper2, s, true)
+    else
+        awful.spawn("xsetroot -solid '#e0e0e0'")
+    end
     -- if beautiful.wallpaper then
     --     local wallpaper = beautiful.wallpaper
     --     -- If wallpaper is a function, call it with the screen
@@ -88,6 +94,8 @@ local function set_wallpaper(s)
     --         wallpaper = wallpaper(s)
     --     end
     --     gears.wallpaper.maximized(wallpaper, s, true)
+    -- else
+        -- awful.spawn("xsetroot -solid '#e0e0e0'")
     -- end
 end
 
